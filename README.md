@@ -5,9 +5,8 @@ Please follow these tests to run your PNUnit tests on BrowserStack:
 
 1. Download and extract the NUnit and PNUnit bundle from http://www.nunit.org/index.php?p=download
 2. Download and extract the latest Selenium C# bundle from http://www.seleniumhq.org/download
-3. Create a new project in Visual Studio
-Note: You need to select ".Net Framework 3.5" in the "New Project" dialog. 
-Then select "Class Library", assign a name to the project and click "OK"
+3. Create a new project in Visual Studio. Then select "Class Library", assign a name to the project and click "OK".
+ * Note: You need to select ".Net Framework 3.5" in the "New Project" dialog. 
 4. In the "Project Explorer", select the project and right-click on references. Then select "Add reference" option and add the following DLL's in your project references:
   1. All the DLL files from Selenium-dotnet net35 folder (total 4).
   2. Following DLL files from NUnit/bin folder:
