@@ -3,7 +3,7 @@ This repo should help you run PNUnit tests on BrowserStack
 
 Please follow these tests to run your PNUnit tests on BrowserStack:
 
-1. Download and extract the NUnit and PNUnit bundle from http://www.nunit.org/index.php?p=download
+1. Download and extract the NUnit 2.6.4 bundle (NUnit-2.6.4.zip) from http://www.nunit.org/index.php?p=download
 2. Download and extract the latest Selenium C# bundle from http://www.seleniumhq.org/download
 3. Create a new project in Visual Studio.
  * Select ".Net Framework 3.5" in the "New Project" dialog. 
