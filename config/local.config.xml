@@ -4,12 +4,12 @@
         <Name>PNUnit-BrowserStack</Name>
         <Tests>
           <TestConf>
-            <Name>single_test</Name>
+            <Name>local_test</Name>
             <Assembly>PNUnit-BrowserStack\bin\Release\PNUnit-BrowserStack.dll</Assembly>
-            <TestToRun>BrowserStack.SingleTest.SearchGoogle</TestToRun>
+            <TestToRun>BrowserStack.LocalTest.HealthCheck</TestToRun>
             <Machine>localhost:8080</Machine>
             <TestParams>
-              <string>single</string>
+              <string>local</string>
               <string>chrome</string>
             </TestParams>
           </TestConf>

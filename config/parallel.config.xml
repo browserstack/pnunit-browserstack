@@ -9,7 +9,8 @@
             <TestToRun>BrowserStack.SingleTest.SearchGoogle</TestToRun>
             <Machine>localhost:8080</Machine>
             <TestParams>
-                <string>chrome</string>
+              <string>parallel</string>
+              <string>chrome</string>
             </TestParams>
           </TestConf>
           <TestConf>
@@ -18,7 +19,18 @@
             <TestToRun>BrowserStack.SingleTest.SearchGoogle</TestToRun>
             <Machine>localhost:8080</Machine>
             <TestParams>
-                <string>firefox</string>
+              <string>parallel</string>
+              <string>firefox</string>
+            </TestParams>
+          </TestConf>
+          <TestConf>
+            <Name>parallel_test</Name>
+            <Assembly>PNUni t-BrowserStack\bin\Release\PNUnit-BrowserStack.dll</Assembly>
+            <TestToRun>BrowserStack.SingleTest.SearchGoogle</TestToRun>
+            <Machine>localhost:8080</Machine>
+            <TestParams>
+              <string>parallel</string>
+              <string>safari</string>
             </TestParams>
           </TestConf>
           <TestConf>
@@ -27,16 +39,8 @@
             <TestToRun>BrowserStack.SingleTest.SearchGoogle</TestToRun>
             <Machine>localhost:8080</Machine>
             <TestParams>
-                <string>safari</string>
-            </TestParams>
-          </TestConf>
-          <TestConf>
-            <Name>parallel_test</Name>
-            <Assembly>PNUnit-BrowserStack\bin\Release\PNUnit-BrowserStack.dll</Assembly>
-            <TestToRun>BrowserStack.SingleTest.SearchGoogle</TestToRun>
-            <Machine>localhost:8080</Machine>
-            <TestParams>
-                <string>ie</string>
+              <string>parallel</string>
+              <string>ie</string>
             </TestParams>
           </TestConf>
         </Tests>

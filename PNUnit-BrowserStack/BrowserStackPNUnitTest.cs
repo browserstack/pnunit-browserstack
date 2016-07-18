@@ -6,7 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Configuration;
-
+using BrowserStack;
 
 namespace BrowserStack
 {
@@ -14,14 +14,16 @@ namespace BrowserStack
   public class BrowserStackPNUnitTest
   {
     protected IWebDriver driver;
+    private Local browserStackLocal;
     private string[] testParams;
     
     [SetUp]
     public void Init()
     {
       testParams = PNUnitServices.Get().GetTestParams();
-      string environment = testParams[0];
-      NameValueCollection caps = ConfigurationManager.GetSection("capabilities") as NameValueCollection;
+      string profile = testParams[0];
+      string environment = testParams[1];
+      NameValueCollection caps = ConfigurationManager.GetSection("capabilities/" + profile) as NameValueCollection;
       NameValueCollection settings = ConfigurationManager.GetSection("environments/" + environment) as NameValueCollection;
 
       DesiredCapabilities capability = new DesiredCapabilities();
@@ -35,8 +37,6 @@ namespace BrowserStack
       {
         capability.SetCapability(key, settings[key]);
       }
-      
-      capability.SetCapability("name", PNUnitServices.Get().GetTestName());
 
       String username = Environment.GetEnvironmentVariable("BROWSERSTACK_USERNAME");
       if(username == null)
@@ -52,7 +52,16 @@ namespace BrowserStack
 
       capability.SetCapability("browserstack.user", username);
       capability.SetCapability("browserstack.key", accesskey);
-      
+
+      if (capability.GetCapability("browserstack.local") != null && capability.GetCapability("browserstack.local").ToString() == "true")
+      {
+        browserStackLocal = new Local();
+        List<KeyValuePair<string, string>> bsLocalArgs = new List<KeyValuePair<string, string>>() {
+          new KeyValuePair<string, string>("key", accesskey)
+        };
+        browserStackLocal.start(bsLocalArgs);
+      }
+
       driver = new RemoteWebDriver(new Uri("http://"+ ConfigurationManager.AppSettings.Get("server") +"/wd/hub/"), capability);
     }
 
@@ -60,6 +69,10 @@ namespace BrowserStack
     public void Cleanup()
     {
       driver.Quit();
+      if (browserStackLocal != null)
+      {
+        browserStackLocal.stop();
+      }
     }
   }
 }
