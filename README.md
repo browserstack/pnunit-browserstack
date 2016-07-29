@@ -3,8 +3,6 @@
 
 ![BrowserStack Logo](https://d98b8t1nnulk5.cloudfront.net/production/images/layout/logo-header.png?1469004780)
 
-<img src ="http://www.nunit.org/img/logo.gif" height = "110">
-
 ## Setup
 * Clone the repo
 * Download and extract [NUnit 2.6.4](https://github.com/nunit/nunitv2/releases/2.6.4)
