@@ -4,12 +4,12 @@
 ![BrowserStack Logo](https://d98b8t1nnulk5.cloudfront.net/production/images/layout/logo-header.png?1469004780)
 
 ## Setup
+* Download and install [NUnit 2.6.4](https://github.com/nunit/nunitv2/releases/2.6.4)
+* Run PNUnit agent `start pnunit-agent.exe agent.conf`
 * Clone the repo
-* Download and extract [NUnit 2.6.4](https://github.com/nunit/nunitv2/releases/2.6.4)
 * Open the solution `PNUnit-BrowserStack.sln` in Visual Studio
 * Build the solution
 * Update `*.config.xml` files inside the `config` directory with your BrowserStack Username and Access Key(https://www.browserstack.com/accounts/settings)
-* Run PNUnit agent `start pnunit-agent.exe agent.conf`
 
 ## Running your tests
 - To run a single test, run `pnunit-launcher.exe config\single.config.xml`
