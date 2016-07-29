@@ -1,5 +1,5 @@
 # pnunit-browserstack
-[PNunit](http://www.nunit.org/index.php?p=pnunit&r=2.5) Integration with BrowserStack.
+[PNUnit](http://www.nunit.org/index.php?p=pnunit&r=2.5) Integration with BrowserStack.
 
 ![BrowserStack Logo](https://d98b8t1nnulk5.cloudfront.net/production/images/layout/logo-header.png?1469004780)
 
