@@ -13,8 +13,10 @@
 
 ## Running your tests
 - To run a single test, run `pnunit-launcher.exe config\single.config.xml`
-- To run parallel tests, run `pnunit-launcher.exe config\parallel.config.xml`
 - To run local tests, run `pnunit-launcher.exe config\local.config.xml`
+- To run parallel tests, run `pnunit-launcher.exe config\parallel.config.xml`
+
+ Understand how many parallel sessions you need by using our [Parallel Test Calculator](https://www.browserstack.com/automate/parallel-calculator?ref=github)
 
 ## Notes
 * You can view your test results on the [BrowserStack automate dashboard](https://www.browserstack.com/automate)
